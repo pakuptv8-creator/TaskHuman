@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="preview-box"></div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>X Offset: <span id="x-val">0px</span></label>
+                <input type="range" id="x-offset" min="-50" max="50" value="10">
+            </div>
+            <div class="control-group">
+                <label>Y Offset: <span id="y-val">0px</span></label>
+                <input type="range" id="y-offset" min="-50" max="50" value="10">
+            </div>
+            <div class="control-group">
+                <label>Spread: <span id="spread-val">0px</span></label>
+                <input type="range" id="spread" min="-50" max="50" value="0">
+            </div>
+            <div class="control-group">
+                <label>Blur: <span id="blur-val">0px</span></label>
+                <input type="range" id="blur" min="0" max="100" value="20">
+            </div>
+            <div class="control-group">
+                <label>Color:</label>
+                <input type="color" id="color" value="#725ac1">
+            </div>
+
+            <div class="result-area">
+                <code id="shadow-code">box-shadow: 10px 10px 20px 0px #725ac1;</code>
+                <button id="copy-btn">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

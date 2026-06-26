@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    filter: url('#goo');
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #03a9f4;
+    border-radius: 50%;
+}
+
+.drop {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #03a9f4;
+    border-radius: 50%;
+    animation: drip 2s infinite ease-in;
+}
+
+.drop:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.drop:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes drip {
+    0% {
+        top: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    50% {
+        width: 40px;
+        height: 60px;
+    }
+    100% {
+        top: 300px;
+        width: 50px;
+        height: 50px;
+    }
+}
